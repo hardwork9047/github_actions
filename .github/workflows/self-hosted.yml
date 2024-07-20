@@ -1,5 +1,8 @@
 name: Hello Selfhosted Runner
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - main  # 実行したいブランチを指定
 
 jobs:
   hello:

@@ -10,6 +10,7 @@ https://docs.github.com/ja/actions/hosting-your-own-runners/managing-self-hosted
 
 # self-hosted runner
 https://qiita.com/h_tyokinuhata/items/7a9297f75d0513572f4a
+https://zenn.dev/hironobuu/articles/e85418948e896f
 
 # Download
 # Create a folder
