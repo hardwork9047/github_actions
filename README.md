@@ -37,3 +37,4 @@ runs-on: self-hosted
 git pullで引っ張ってこれるけど、
 保存先がデフォルトだと/opt/actions-runner/_work/github_actions/github_actionsになる。
 これをOKとするかどうか・・・。
+(追記)git pullをしなくても、self-hosted runnerの_workフォルダに勝手に引っ張ってこられる。
