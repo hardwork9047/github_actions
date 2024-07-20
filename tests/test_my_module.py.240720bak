@@ -22,19 +22,20 @@ def setup_database():
     connection.commit()
     return connection
 
-def get_test_data():
+@pytest.fixture(scope="module")
+def db_connection():
     connection = setup_database()
-    cursor = connection.cursor()
+    yield connection
+    connection.close()
+
+@pytest.fixture
+def test_data(db_connection):
+    cursor = db_connection.cursor()
     cursor.execute("SELECT input, output FROM test_table")
     rows = cursor.fetchall()
-    connection.close()
     return rows
 
-# テストデータを取得
-test_data = get_test_data()
-
-# パラメータ化されたテスト
-@pytest.mark.parametrize("input_value, expected_output", test_data)
-def test_database_entries(input_value, expected_output):
-    result = perform_test(input_value)
-    assert result == expected_output
+def test_database_entries(test_data):
+    for input_value, expected_output in test_data:
+        result = perform_test(input_value)
+        assert result == expected_output
