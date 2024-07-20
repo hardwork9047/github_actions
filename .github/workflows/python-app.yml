@@ -29,4 +29,5 @@ jobs:
       env:
         TERM: xterm-256color  # カラーサポートを有効にするための設定
       run: |
-        pytest -v tests/
+        # pytest -v tests/
+        pytest -v --cov=src tests/
