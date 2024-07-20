@@ -31,3 +31,9 @@ $ ./run.sh
 # Using your self-hosted runner
 # Use this YAML in your workflow file for each job
 runs-on: self-hosted
+
+
+#memo
+git pullで引っ張ってこれるけど、
+保存先がデフォルトだと/opt/actions-runner/_work/github_actions/github_actionsになる。
+これをOKとするかどうか・・・。
