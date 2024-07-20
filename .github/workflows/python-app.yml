@@ -30,4 +30,4 @@ jobs:
         TERM: xterm-256color  # カラーサポートを有効にするための設定
       run: |
         # pytest -v tests/
-        pytest -v --cov=src tests/
+        pytest -v --cov=src --cov-report=term-missing tests/
