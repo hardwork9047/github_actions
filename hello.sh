@@ -14,4 +14,4 @@ echo "IP Address: $(hostname -I | awk '{print $1}')"
 # echo "Pulling latest changes from git repository"
 # git pull origin main
 
-echo "Add comment from Windows PC"
+echo "Add comment from Ubuntu"
